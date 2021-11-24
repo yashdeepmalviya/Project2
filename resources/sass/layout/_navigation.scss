@@ -1,0 +1,149 @@
+.nav {
+    position: absolute; 
+    display: inline-block; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+
+    &__logo {
+        margin-top: 2rem;
+        height: 10rem;
+        width: auto;
+        float: left;
+    }
+    
+    &__logo-black {
+        display: none;
+        margin: .5rem 0;
+        height: 5rem;
+        width: auto;
+        float: left;
+    }
+
+    &__list {
+        margin-top: 5.5rem;
+        float: right;
+        list-style: none;
+
+        @include respond(phone) { 
+            display: none;
+            float: left;
+            margin-top: 3.5rem;
+            margin-left: 2.5rem;
+        } 
+    }
+
+    &__item { 
+        display: inline-block;
+        margin-left: 4rem;
+
+        @include respond(phone) { 
+            display: block;         //żeby elementy listy się układały się pod sobą dla telefonów
+        } 
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        color: $color-white;
+        padding: .8rem 0;
+        border-bottom: .2rem solid transparent;
+        transition: border-bottom .2s;
+
+        @include respond(phone) { 
+            display: block;
+            border: 0;
+            padding: 1rem 0;
+            font-size: $default-font-size;
+        } 
+
+        &:hover,
+        &:active {
+            border-bottom: .2rem solid $color-primary;
+
+            @include respond(phone) { 
+                border: 0;
+            } 
+        }
+    }
+}
+
+
+// STICKY NAVIGATION
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba($color-white, .98);
+    z-index: 2000;
+    box-shadow: 0 .2rem .2rem rgba($color-black, .08);
+
+    //gdy pojawia się klasa .sticky to logo logo czarne znajdujące się w divie z klasą sticky będzie widoczne, a białe nie (odwrotne ustawienia są powyżej dla normalnego menu
+    & .nav__logo-black { 
+        display: block; 
+
+        @include respond(phone) {
+            margin-top: 1.5rem;
+        }
+    }
+
+    & .nav__logo { display: none; }
+
+    & .nav__link:link,
+    & .nav__link:visited {
+        color: $color-gray-dark;
+        padding: 1.6rem 0;
+
+        @include respond(phone) {
+           padding: 1rem 0; 
+        }
+    }
+
+    & .nav__list {
+        margin-top: 1.9rem;
+
+        @include respond(phone) {
+            margin-top: 1rem;
+        }
+    }
+
+        //mogą być normalnie opisane, a nie jako @include respond(phone) bo i tak się ta ikona nie pojawi na urządzeniach innej rozdzielcości
+    & .mobile-nav-icon i {
+        @include respond(phone) {
+        color: $color-gray-dark;
+        font-size: 6rem;
+        }
+    }
+
+    & .mobile-nav-icon {
+        @include respond(phone) {
+            margin-top: 1rem;
+        }
+    }
+}
+
+// RESPONSIVE NAVIGATION FOR MOBILES
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 3rem;
+    cursor: pointer;
+    display: none;
+
+    @include respond(phone) { 
+        display: inline-block;
+    } 
+
+    & i {
+        font-size: 7rem;
+        color: $color-white;
+        margin-top: 2.5rem;
+        margin-right: 2.5rem;
+
+    }
+}
+

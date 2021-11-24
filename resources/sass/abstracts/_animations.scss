@@ -1,0 +1,17 @@
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0;
+}
+
+//wybieram obie klasy (wpisane bez spacji), wtedy to co w {} zadzieje się tylko w przypadku gdy obie klasy są aktywne. U nas klasa .animated jest dodana w momencie scrollowania do diva z klasą .js--wp-1 (dzięki js)
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+    animation-duration: .7s;
+}
+
+.js--wp-4.animated {
+    animation-duration: .7s;
+}

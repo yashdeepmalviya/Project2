@@ -1,0 +1,67 @@
+.city-img {
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+
+    @include respond(tab-port) {
+        margin-top: 2rem;
+    }
+    @include respond(phone) { 
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 3rem;
+        border-radius: .3rem;
+    } 
+}
+
+.section-city-list {
+    list-style: none;
+
+    @include respond(phone) { 
+        width: 80%;
+        margin-left: 10%;
+    } 
+}
+
+.section-city-item {
+    font-size: $default-font-size;
+    padding: .6rem 0;
+
+    @include respond(tab-port) {
+        font-size: $font-size-small-1;
+    }
+    @include respond(phone) { 
+        padding: .1rem 0;
+        text-align: center;
+
+        &:not(:first-child){
+            display: inline-block;
+            margin-right: 2.5rem;
+        }
+    } 
+
+    &:first-child {
+        text-transform: uppercase;
+        padding: 1rem 0;
+
+        @include respond(phone) { 
+            text-align: center;
+        } 
+    }
+}
+
+.section-city-mail {
+        
+    &,
+    &:link,
+    &:visited {            
+        color: $color-primary;
+        text-decoration: none;
+        text-decoration-line: underline;
+        transition: all .5s ease;                     
+    }
+    &:hover,
+    &:active {
+        text-decoration-line: none;
+    }
+}

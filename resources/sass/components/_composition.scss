@@ -1,0 +1,36 @@
+.icon-small {
+    color: $color-primary;
+    margin-right: 1rem;
+    margin-left: 1rem;
+
+    @include respond(tab-port) {
+        margin-right: .5rem;
+        margin-left: 0;
+    }
+}
+
+.icon-small-checked {
+    color: $color-primary;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: $font-size-big;
+
+    @include respond(tab-port) {
+        font-size: $default-font-size;
+        margin-right: .5rem;
+        margin-left: 0;
+    }
+}
+
+.icon-big {
+    color: $color-primary;
+    display: block;
+    font-size: 700%;
+    font-weight: 100;
+    margin-bottom: 1rem;
+
+    @include respond(phone) {
+        margin-top: 1.5rem;
+        margin-bottom: .5rem;
+    }
+}

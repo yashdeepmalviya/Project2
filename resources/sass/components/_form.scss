@@ -1,0 +1,87 @@
+
+.map-box {
+    width: 100%;
+    height: 60rem;
+    position: relative;
+
+    @include respond(phone) {
+        height: auto;
+    }
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: relative;
+
+    @include respond(phone) {
+        height: 40rem;
+    }
+}
+
+.form-box {
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba($color-white, .8);
+    z-index: 10;
+    padding: 4rem 2rem 2rem 2rem;
+
+    @include respond(phone) {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.form {
+    width: 100%;
+    margin: 0 auto;
+    font-size: $default-font-size;
+
+    @include respond(tab-port) {
+        width: 90%;
+    }
+
+    &__input {
+        font-size: $default-font-size;
+        color: $color-gray-dark-2;
+        font-weight: 300;
+    }
+
+    input[type=text],
+    input[type=email],
+    select,
+    textarea {
+        width: 100%;
+        padding: .7rem;
+        border-radius: .3rem;
+        border: .1rem solid $color-gray-dark-1;
+    }
+
+    input[type=checkbox] {
+        margin:1rem .5rem 1rem 0;
+    }
+
+    .form-messages {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 4rem;
+        border-radius: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .success {
+        color: rgb(3, 168, 3);
+    }
+
+    .error {
+        color: rgb(255, 0, 0);
+    }
+}
+
+
+

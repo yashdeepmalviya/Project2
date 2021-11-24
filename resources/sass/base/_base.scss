@@ -1,0 +1,55 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+*:focus {
+    outline: none;  //żeby się pozbyć automatycznie dodanej przez przeglądarkę obwódki na przyciskach aktywnych
+}
+
+html {
+    font-size: 62.5%;   //1rem=10px 62.5% w tym projekcie chce mieć wyjściową czcionkę 20px
+    color: $color-gray-dark;
+    font-family: 'Lato','Arial', sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+
+    @include respond(tab-land) {    //width < 1200px
+        font-size: 56.25%;          // 1rem = 9px, 9/16=56.25%
+    }
+
+    @include respond(tab-port) {    // width < 900px
+        font-size: 50%;             // 1rem = 8px, 8/16=50%
+    }
+
+        /* tego nie potrzebuję jak chcę mieć taką samą czcionkę jak dla @media tab-port
+    @include respond(phone) { font-size: 50%; }
+        */
+
+    @include respond(big-desktop) {
+        font-size: 75%;  // 1rem = 12px, 12/16=75%
+    }
+}
+
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;     //dzięki temu jak jakiś teks się nie mieści po zmniejszeniu strony, nie będzie powodował powstania tego białego tła i scrolla na dole, tylko zostanie ucięty
+}
+
+section {
+    padding: 8rem 0;
+    width: 100%;
+
+    @include respond(tab-port) {    
+        padding: 6rem 0;             
+    }
+}
+
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white; }

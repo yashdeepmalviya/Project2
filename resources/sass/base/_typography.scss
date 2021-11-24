@@ -1,0 +1,68 @@
+.heading { 
+    font-weight: 300;
+    text-transform: uppercase;
+
+    &__primary {
+        font-size: $font-heading-primary;
+        margin-top: 0;
+        margin-bottom: 2rem;        
+        color: $color-white;        
+        //width: $grid-width;    
+        word-spacing: 0.4rem;
+        letter-spacing: 0.1rem;
+        
+        @include respond(phone) { 
+            font-size: $font-heading-primary-small;
+        }
+    }
+
+    &__secondary {
+        font-size: $font-heading-secondary;
+        color: $color-gray-dark;
+        text-align: center;
+        margin-bottom: 3rem;
+        letter-spacing: .1rem;
+
+        @include respond(phone) { 
+            font-size: $font-heading-secondary-small;
+        } 
+
+        &::after {
+            display: block;
+            height: 0.2rem;
+            background-color: $color-primary;
+            content: "";
+            width: 10rem;
+            margin: 0 auto; //wyśrodkowanie na ekranie
+            margin-top: 3rem;
+        }
+
+    }
+
+    &__tertiary {
+        font-size: $font-heading-tertiary;
+        color: $color-gray-dark;      
+        margin-bottom: 1.5rem;     
+    }
+}
+
+.paragraph {
+
+    &__first {
+        font-size: $default-font-size;
+        line-height: 145%;
+        width: 70%;
+        margin-left: 15%; //do wyrównania tekstu na stronie. Całość ma mieć 100%, sam tekst ma u nas 70%, więc brzegi będą miały po 15%  
+
+        @include respond(tab-port) {
+            width: 80%;
+            margin-left: 10%;
+        }
+    }
+
+    &__second {
+        font-size: $font-size-small;
+        line-height: 145%;
+    }
+
+}

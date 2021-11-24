@@ -1,0 +1,80 @@
+.footer {
+    width: 100%;
+    background-color: $color-gray-dark-3;
+    color: $color-gray-dark-2;
+    font-size: $font-size-small;
+    padding: 5rem 0;
+
+    
+    &__nav-1 {
+        text-align: left;
+        display: block;  
+    }
+
+    &__nav-2 {
+        font-size: $font-size-big;
+        text-align: right;
+    }
+
+    &__list{
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        &--link:link,
+        &--link:visited {
+            display: block;
+            text-decoration: none;
+            color: $color-gray-dark-2;
+            transition: all .2s;
+        }
+        &--link:hover,
+        &--link:active {
+            color: $color-gray-light;
+        }
+    }
+
+    &__icon {
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-gray-dark-2;
+            font-size: 3rem;
+        }
+
+        &--1:hover,
+        &--1:active {
+            color: rgb(59, 89, 152);
+        }
+        &--2:hover,
+        &--2:active {
+            color: rgb(85, 172, 238);
+        }
+        &--3:hover,
+        &--3:active {
+            color: rgb(221, 75, 57);
+        }
+        &--4:hover,
+        &--4:active {
+            color: rgb(233, 89, 80);
+        }
+    }
+
+    &__text {
+        margin-bottom: 1.2rem;
+        text-align: center;
+    }
+    
+}
+
+.ion-ios-heart {
+        color: red;
+    }

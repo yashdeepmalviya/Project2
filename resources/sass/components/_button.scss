@@ -1,0 +1,50 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        font-size: $button-font-size;
+        padding: 1rem 3rem;
+        font-weight: 300;
+        display: inline-block;
+        border-radius: $border-radius-big;
+        border: 0.1rem solid $color-primary;
+        transition: all 0.2s;
+        margin-right: 1.5rem;
+      //  position: relative;
+   
+    }
+
+    &--full {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &:hover,
+        &:active {
+            background-color: $color-primary-dark;
+            border: 0.1rem solid $color-primary-dark;
+        }
+    }
+    
+    &--ghost {
+        background-color: transparent;
+        color: $color-primary;
+        border: 0.1rem solid $color-primary;
+
+        &:hover,
+        &:active {
+            background-color: $color-primary-dark;
+            border: 0.1rem solid $color-primary-dark;
+            color: $color-white;
+        }
+    }
+}
+
+.btn-app {
+
+    &__img {
+        height: 5rem;
+        width: auto;
+        margin-right: 1rem;
+    }
+}

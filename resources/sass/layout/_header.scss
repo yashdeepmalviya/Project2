@@ -1,0 +1,24 @@
+.header {
+    width: 100%;
+    background-image: linear-gradient(rgba($color-black, 0.7), rgba($color-black, 0.7)), url(img/hero-min.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;   //powoduje, ze zdjecie w tle nie przesuwa sie gdy scrollujemy 
+
+    &__text-box {
+        position: absolute;
+        width: $grid-width;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+
+        @include respond(tab-land) {
+            width: 100%;
+            padding: 0 2%;
+        }
+        @include respond(phone) { padding: 0 4%;} 
+    }
+}
