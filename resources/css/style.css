@@ -4571,11 +4571,11 @@ section {
 }
 
 .img-box img{
-    max-width: 500px;
+    max-width: 400px;
     border-radius: 10px;
     border: 1px solid #000;
     padding: 10px;
-height: 385px;
+height: 300px;
 box-sizing: border-box;
 
 }
